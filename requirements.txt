@@ -2,3 +2,6 @@ numpy>=1.26,<3
 opencv-python>=4.8,<5
 mediapipe>=0.10.14,<0.11
 pytest>=8,<9
+# CUDA 12.8 wheel for the project's NVIDIA RTX 4050 training environment.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
