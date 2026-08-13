@@ -1,0 +1,36 @@
+landmark_subsets:
+  pose:
+    - pose
+  hands:
+    - left_hand
+    - right_hand
+  pose_hands:
+    - pose
+    - left_hand
+    - right_hand
+  pose_hands_mouth:
+    - pose
+    - left_hand
+    - right_hand
+    - mouth
+  pose_hands_eyes:
+    - pose
+    - left_hand
+    - right_hand
+    - left_eye
+    - right_eye
+  pose_hands_eyebrows:
+    - pose
+    - left_hand
+    - right_hand
+    - left_eyebrow
+    - right_eyebrow
+  pose_hands_face:
+    - pose
+    - left_hand
+    - right_hand
+    - mouth
+    - left_eye
+    - right_eye
+    - left_eyebrow
+    - right_eyebrow
