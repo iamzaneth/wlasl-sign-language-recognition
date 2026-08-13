@@ -1,0 +1,68 @@
+{
+  "expected_instances": 21083,
+  "available_videos": 11980,
+  "missing_videos": 9103,
+  "invalid_videos": 0,
+  "usable_videos": 11980,
+  "coverage_percent": 56.823,
+  "by_split": {
+    "train": {
+      "expected": 14289,
+      "available": 8313,
+      "missing": 5976,
+      "invalid": 0,
+      "usable": 8313,
+      "coverage": 58.1776
+    },
+    "val": {
+      "expected": 3916,
+      "available": 2253,
+      "missing": 1663,
+      "invalid": 0,
+      "usable": 2253,
+      "coverage": 57.5332
+    },
+    "test": {
+      "expected": 2878,
+      "available": 1414,
+      "missing": 1464,
+      "invalid": 0,
+      "usable": 1414,
+      "coverage": 49.1313
+    }
+  },
+  "subsets": {
+    "wlasl100": {
+      "expected": 2038,
+      "available": 1013,
+      "missing": 1025,
+      "invalid": 0,
+      "usable": 1013,
+      "coverage": 49.7056
+    },
+    "wlasl300": {
+      "expected": 5117,
+      "available": 2660,
+      "missing": 2457,
+      "invalid": 0,
+      "usable": 2660,
+      "coverage": 51.9836
+    },
+    "wlasl1000": {
+      "expected": 13168,
+      "available": 7232,
+      "missing": 5936,
+      "invalid": 0,
+      "usable": 7232,
+      "coverage": 54.921
+    },
+    "wlasl2000": {
+      "expected": 21083,
+      "available": 11980,
+      "missing": 9103,
+      "invalid": 0,
+      "usable": 11980,
+      "coverage": 56.823
+    }
+  }
+}
