@@ -7,6 +7,7 @@ venv/
 # IDE
 .vscode/
 .idea/
+.tmp/
 
 # Training outputs
 outputs/
@@ -15,6 +16,7 @@ runs/
 checkpoints/
 wandb/
 tensorboard/
+reports/
 
 # Model weights
 *.pth
@@ -22,12 +24,18 @@ tensorboard/
 *.ckpt
 *.onnx
 
-# Data
+# Large/generated data (small manifests and metadata may be tracked).
 data/raw/*
-data/interim/*
-data/processed/*
+data/interim/landmarks/*
+data/processed/landmarks/*
 
-# Keep folder structure
+# Keep the data contract visible in Git.
 !data/raw/.gitkeep
-!data/interim/.gitkeep
-!data/processed/.gitkeep
+!data/interim/landmarks/.gitkeep
+!data/processed/landmarks/.gitkeep
+
+# User-provided MediaPipe task bundles.
+models/mediapipe/*.task
+
+# Local cache created while importing MediaPipe's matplotlib dependency.
+.tmp-matplotlib/

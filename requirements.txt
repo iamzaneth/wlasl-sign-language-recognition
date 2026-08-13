@@ -1,0 +1,4 @@
+numpy>=1.26,<3
+opencv-python>=4.8,<5
+mediapipe>=0.10.14,<0.11
+pytest>=8,<9
