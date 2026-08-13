@@ -1,0 +1,29 @@
+{
+  "subset": "wlasl100",
+  "seq_len": 60,
+  "num_samples": 1013,
+  "feature_dim": 429,
+  "modalities": {
+    "pose": [
+      0,
+      27
+    ],
+    "hand": [
+      27,
+      153
+    ],
+    "mouth": [
+      153,
+      273
+    ],
+    "eye": [
+      273,
+      369
+    ],
+    "eyebrow": [
+      369,
+      429
+    ]
+  },
+  "source": "D:\\Data\\ThienPhuc\\Projects\\wlasl-sign-language-recognition\\data\\processed\\landmarks\\shoulder_norm_v1"
+}
