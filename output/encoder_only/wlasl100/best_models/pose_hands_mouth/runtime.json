@@ -1,0 +1,19 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu_logical_cores": 20,
+  "torch_version": "2.11.0+cu128",
+  "device": "cuda",
+  "num_workers": 2,
+  "cpu_threads": 20,
+  "pin_memory": true,
+  "prefetch_factor": 4,
+  "amp_enabled": true,
+  "gpu_name": "NVIDIA GeForce RTX 4050 Laptop GPU",
+  "gpu_memory_gb": 6.0,
+  "cudnn_benchmark": true,
+  "tf32_matmul": true,
+  "tf32_cudnn": true,
+  "float32_matmul_precision": "high",
+  "torch_compile": "disabled"
+}

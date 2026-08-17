@@ -1,0 +1,29 @@
+{
+  "run_id": "pose_hands_mouth__large5_r4_dropout_high_seed3_20260817_021751",
+  "name": "pose_hands_mouth__large5_r4_dropout_high_seed3",
+  "modalities": "pose,hand,mouth",
+  "input_dim": 273,
+  "best_epoch": 96,
+  "best_val_macro_f1": 0.703852327447833,
+  "test_acc": 0.61,
+  "test_macro_f1": 0.6032407407407407,
+  "test_weighted_f1": 0.591,
+  "test_balanced_acc": 0.6388888888888888,
+  "test_loss": 2.4367097741365433,
+  "test_top1_acc": 0.61,
+  "test_top5_acc": 0.84,
+  "test_num_samples": 100.0,
+  "seconds": 156.55010437965393,
+  "run_dir": "output/encoder_only/wlasl100/pose_hands_mouth/runs/pose_hands_mouth__large5_r4_dropout_high_seed3_20260817_021751",
+  "artifacts": [
+    "config.json",
+    "runtime.json",
+    "data_context.json",
+    "history.csv",
+    "metrics.csv",
+    "test_predictions.csv",
+    "test_per_class_metrics.csv",
+    "best.pt",
+    "last.pt"
+  ]
+}

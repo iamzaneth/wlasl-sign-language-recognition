@@ -1,0 +1,7 @@
+{
+  "landmark_subset": "pose_hands",
+  "best_val_macro_f1": 0.7021401819154629,
+  "test_macro_f1": 0.6291666666666667,
+  "source_run_dir": "output/encoder_only/wlasl100/pose_hands/runs/pose_hands__large5_r5_portfolio_r2_depth_down_seed4_20260817_181544",
+  "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands"
+}

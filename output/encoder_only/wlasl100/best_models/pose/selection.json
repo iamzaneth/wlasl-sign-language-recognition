@@ -1,0 +1,7 @@
+{
+  "landmark_subset": "pose",
+  "best_val_macro_f1": 0.2933297663634742,
+  "test_macro_f1": 0.17032627865961197,
+  "source_run_dir": "output/encoder_only/wlasl100/pose/runs/pose__large5_r3_lr_1.40_seed4_20260816_124118",
+  "best_model_dir": "output/encoder_only/wlasl100/best_models/pose"
+}

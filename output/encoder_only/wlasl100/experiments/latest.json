@@ -1,0 +1,246 @@
+{
+  "experiment_id": "round7",
+  "status": "complete",
+  "dataset": "wlasl100",
+  "strategy": "two result-informed profiles times three matched confirmation seeds per landmark subset",
+  "new_trial_count": 42,
+  "configurations_per_landmark_subset": 6,
+  "selection_metric": "val_macro_f1",
+  "test_metrics_used_for_selection": false,
+  "landmark_subsets": [
+    "pose",
+    "hands",
+    "pose_hands",
+    "pose_hands_mouth",
+    "pose_hands_eyes",
+    "pose_hands_eyebrows",
+    "pose_hands_face"
+  ],
+  "rationales": {
+    "pose": "Round 6 did not replace the historical winner; compare that winner with the best Round 6 profile across three new matched seeds.",
+    "hands": "Round 6 did not replace the historical winner; compare that winner with the best Round 6 profile across three new matched seeds.",
+    "pose_hands": "Confirm the first- and second-ranked Round 6 profiles across three new matched seeds.",
+    "pose_hands_mouth": "Confirm the first- and second-ranked Round 6 profiles across three new matched seeds.",
+    "pose_hands_eyes": "Confirm the first- and second-ranked Round 6 profiles across three new matched seeds.",
+    "pose_hands_eyebrows": "Round 6 did not replace the historical winner; compare that winner with the best Round 6 profile across three new matched seeds.",
+    "pose_hands_face": "Confirm the first- and second-ranked Round 6 profiles across three new matched seeds."
+  },
+  "generated_at": "2026-08-15T18:37:03",
+  "completed_at": "2026-08-15T19:22:29",
+  "confirmation_results": [
+    {
+      "landmark_subset": "pose",
+      "selection_metric": "val_macro_f1",
+      "test_metrics_used_for_selection": false,
+      "profiles": [
+        {
+          "profile": "round6_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.25881933297663634,
+          "val_macro_f1_stdev": 0.020980653598579233,
+          "val_macro_f1_max": 0.281175316568575,
+          "test_macro_f1_mean_reporting_only": 0.179320987654321
+        },
+        {
+          "profile": "historical_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.24364484870102845,
+          "val_macro_f1_stdev": 0.01012583025393916,
+          "val_macro_f1_max": 0.25056179775280896,
+          "test_macro_f1_mean_reporting_only": 0.18214285714285713
+        }
+      ]
+    },
+    {
+      "landmark_subset": "hands",
+      "selection_metric": "val_macro_f1",
+      "test_metrics_used_for_selection": false,
+      "profiles": [
+        {
+          "profile": "historical_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.657648177872897,
+          "val_macro_f1_stdev": 0.040352321359727994,
+          "val_macro_f1_max": 0.6936597110754414,
+          "test_macro_f1_mean_reporting_only": 0.6171516754850088
+        },
+        {
+          "profile": "round6_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.6563313714999108,
+          "val_macro_f1_stdev": 0.02589465808502166,
+          "val_macro_f1_max": 0.6801765650080257,
+          "test_macro_f1_mean_reporting_only": 0.60597442680776
+        }
+      ]
+    },
+    {
+      "landmark_subset": "pose_hands",
+      "selection_metric": "val_macro_f1",
+      "test_metrics_used_for_selection": false,
+      "profiles": [
+        {
+          "profile": "round6_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.6532013554485464,
+          "val_macro_f1_stdev": 0.007202541564015547,
+          "val_macro_f1_max": 0.6576243980738362,
+          "test_macro_f1_mean_reporting_only": 0.620679012345679
+        },
+        {
+          "profile": "round6_runner_up",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.6325099577908566,
+          "val_macro_f1_stdev": 0.032336751213182476,
+          "val_macro_f1_max": 0.6678170144462279,
+          "test_macro_f1_mean_reporting_only": 0.5836419753086419
+        }
+      ]
+    },
+    {
+      "landmark_subset": "pose_hands_mouth",
+      "selection_metric": "val_macro_f1",
+      "test_metrics_used_for_selection": false,
+      "profiles": [
+        {
+          "profile": "round6_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.6473396349800844,
+          "val_macro_f1_stdev": 0.025948555525365916,
+          "val_macro_f1_max": 0.6722846441947565,
+          "test_macro_f1_mean_reporting_only": 0.5978615520282187
+        },
+        {
+          "profile": "round6_runner_up",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.6430414362998632,
+          "val_macro_f1_stdev": 0.028825361490545296,
+          "val_macro_f1_max": 0.6742643124665596,
+          "test_macro_f1_mean_reporting_only": 0.6240961199294532
+        }
+      ]
+    },
+    {
+      "landmark_subset": "pose_hands_eyes",
+      "selection_metric": "val_macro_f1",
+      "test_metrics_used_for_selection": false,
+      "profiles": [
+        {
+          "profile": "round6_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.6408566672611616,
+          "val_macro_f1_stdev": 0.031221830943948217,
+          "val_macro_f1_max": 0.6767790262172284,
+          "test_macro_f1_mean_reporting_only": 0.6179012345679012
+        },
+        {
+          "profile": "round6_runner_up",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.5880328161227037,
+          "val_macro_f1_stdev": 0.029291361891464588,
+          "val_macro_f1_max": 0.6182718031032637,
+          "test_macro_f1_mean_reporting_only": 0.5518518518518518
+        }
+      ]
+    },
+    {
+      "landmark_subset": "pose_hands_eyebrows",
+      "selection_metric": "val_macro_f1",
+      "test_metrics_used_for_selection": false,
+      "profiles": [
+        {
+          "profile": "round6_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.6640598061946377,
+          "val_macro_f1_stdev": 0.033298485552910054,
+          "val_macro_f1_max": 0.6959782414838596,
+          "test_macro_f1_mean_reporting_only": 0.6457231040564374
+        },
+        {
+          "profile": "historical_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.6636828423345277,
+          "val_macro_f1_stdev": 0.02217449797263083,
+          "val_macro_f1_max": 0.6841821100248066,
+          "test_macro_f1_mean_reporting_only": 0.6509479717813051
+        }
+      ]
+    },
+    {
+      "landmark_subset": "pose_hands_face",
+      "selection_metric": "val_macro_f1",
+      "test_metrics_used_for_selection": false,
+      "profiles": [
+        {
+          "profile": "round6_best",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.617189822246002,
+          "val_macro_f1_stdev": 0.010000589918403122,
+          "val_macro_f1_max": 0.627019796682718,
+          "test_macro_f1_mean_reporting_only": 0.5898148148148148
+        },
+        {
+          "profile": "round6_runner_up",
+          "replicates": 3,
+          "val_macro_f1_mean": 0.5964211402413649,
+          "val_macro_f1_stdev": 0.030069668746200064,
+          "val_macro_f1_max": 0.6265382557517388,
+          "test_macro_f1_mean_reporting_only": 0.5613095238095238
+        }
+      ]
+    }
+  ],
+  "winners": [
+    {
+      "landmark_subset": "pose",
+      "best_val_macro_f1": 0.281175316568575,
+      "test_macro_f1": 0.1689814814814815,
+      "source_run_dir": "output/encoder_only/wlasl100/pose/runs/pose__round7_round6_best_seed3_20260815_184222",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose"
+    },
+    {
+      "landmark_subset": "hands",
+      "best_val_macro_f1": 0.7157838416265382,
+      "test_macro_f1": 0.7019179894179894,
+      "source_run_dir": "output/encoder_only/wlasl100/hands/runs/hands__round4_wd_high_20260814_001721",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/hands"
+    },
+    {
+      "landmark_subset": "pose_hands",
+      "best_val_macro_f1": 0.673729266987694,
+      "test_macro_f1": 0.6444444444444444,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands/runs/pose_hands__round6_l3_ff1280_d35_20260815_180858",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands"
+    },
+    {
+      "landmark_subset": "pose_hands_mouth",
+      "best_val_macro_f1": 0.6849311736952187,
+      "test_macro_f1": 0.5666666666666667,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands_mouth/runs/pose_hands_mouth__round6_l1_ff768_20260815_181517",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_mouth"
+    },
+    {
+      "landmark_subset": "pose_hands_eyes",
+      "best_val_macro_f1": 0.6767790262172284,
+      "test_macro_f1": 0.6357142857142857,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands_eyes/runs/pose_hands_eyes__round7_round6_best_seed2_20260815_190558",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_eyes"
+    },
+    {
+      "landmark_subset": "pose_hands_eyebrows",
+      "best_val_macro_f1": 0.6959782414838596,
+      "test_macro_f1": 0.6625661375661376,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands_eyebrows/runs/pose_hands_eyebrows__round7_round6_best_seed2_20260815_191429",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_eyebrows"
+    },
+    {
+      "landmark_subset": "pose_hands_face",
+      "best_val_macro_f1": 0.627019796682718,
+      "test_macro_f1": 0.5657407407407408,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands_face/runs/pose_hands_face__round7_round6_best_seed3_20260815_191825",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_face"
+    }
+  ],
+  "stdout_log": "output/encoder_only/wlasl100/logs/round7.stdout.log",
+  "stderr_log": "output/encoder_only/wlasl100/logs/round7.stderr.log"
+}

@@ -1,0 +1,7 @@
+{
+  "landmark_subset": "pose_hands_eyes",
+  "best_val_macro_f1": 0.6862760834670947,
+  "test_macro_f1": 0.5657407407407408,
+  "source_run_dir": "output/encoder_only/wlasl100/pose_hands_eyes/runs/pose_hands_eyes__large5_r1_wide640_seed3_20260816_012927",
+  "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_eyes"
+}

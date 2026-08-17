@@ -1,0 +1,7 @@
+{
+  "landmark_subset": "hands",
+  "best_val_macro_f1": 0.7157838416265382,
+  "test_macro_f1": 0.7019179894179894,
+  "source_run_dir": "output/encoder_only/wlasl100/hands/runs/hands__round4_wd_high_20260814_001721",
+  "best_model_dir": "output/encoder_only/wlasl100/best_models/hands"
+}

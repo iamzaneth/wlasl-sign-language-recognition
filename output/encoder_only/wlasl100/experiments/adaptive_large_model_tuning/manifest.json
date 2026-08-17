@@ -1,0 +1,12 @@
+{
+  "campaign_id": "adaptive_large_model_tuning",
+  "trial_namespace": "large5",
+  "dataset": "wlasl100",
+  "rounds": 5,
+  "configurations_per_subset_per_round": 25,
+  "subsets_per_round": 7,
+  "trials_per_round": 175,
+  "total_planned_trials": 875,
+  "selection_metric": "mean_val_macro_f1_over_five_seeds",
+  "test_metrics_used_for_selection": false
+}

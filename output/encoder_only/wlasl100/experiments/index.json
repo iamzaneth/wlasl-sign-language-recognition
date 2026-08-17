@@ -1,0 +1,28 @@
+{
+  "storage_version": 3,
+  "path_format": "project-relative-posix",
+  "policy": {
+    "campaign_results": "adaptive_large_model_tuning/results.csv",
+    "campaign_status": "adaptive_large_model_tuning/status.csv",
+    "incomplete_round": "adaptive_large_model_tuning/active_trials.json"
+  },
+  "active_campaign": {
+    "campaign_id": "adaptive_large_model_tuning",
+    "round": "5",
+    "status": "paused",
+    "trial_count": "175",
+    "completed_trial_count": "8",
+    "started_at": "2026-08-17T05:46:33",
+    "paused_at": "2026-08-17T06:44:04",
+    "completed_at": "",
+    "stdout_log": "",
+    "stderr_log": "",
+    "resume_command": ".\\.venv\\Scripts\\python.exe -u scripts\\tune_wlasl100_large_adaptive.py --campaign-id adaptive_large_model_tuning --device cuda --start-round 5 --end-round 5"
+  },
+  "flattened_campaign": {
+    "campaign_directory_renamed": true,
+    "round_directories": 0,
+    "active_trials_preserved": true,
+    "active_trials_sha256": "c2ad9cfc6f73c54c334cff357be698f4794eb74890fcbcb85c025c637b49a038"
+  }
+}

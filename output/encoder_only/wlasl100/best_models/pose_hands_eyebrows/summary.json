@@ -1,0 +1,29 @@
+{
+  "run_id": "pose_hands_eyebrows__round7_round6_best_seed2_20260815_191429",
+  "name": "pose_hands_eyebrows__round7_round6_best_seed2",
+  "modalities": "pose,hand,eyebrow",
+  "input_dim": 213,
+  "best_epoch": 86,
+  "best_val_macro_f1": 0.6959782414838596,
+  "test_acc": 0.68,
+  "test_macro_f1": 0.6625661375661376,
+  "test_weighted_f1": 0.6464761904761904,
+  "test_balanced_acc": 0.7060185185185185,
+  "test_loss": 1.9208398294448852,
+  "test_top1_acc": 0.68,
+  "test_top5_acc": 0.85,
+  "test_num_samples": 100.0,
+  "seconds": 46.52214956283569,
+  "run_dir": "output/encoder_only/wlasl100/pose_hands_eyebrows/runs/pose_hands_eyebrows__round7_round6_best_seed2_20260815_191429",
+  "artifacts": [
+    "config.json",
+    "runtime.json",
+    "data_context.json",
+    "history.csv",
+    "metrics.csv",
+    "test_predictions.csv",
+    "test_per_class_metrics.csv",
+    "best.pt",
+    "last.pt"
+  ]
+}

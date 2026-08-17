@@ -1,0 +1,6 @@
+campaign_id,round,status,trial_count,completed_trial_count,started_at,paused_at,completed_at,stdout_log,stderr_log,resume_command
+adaptive_large_model_tuning,1,complete,175,,,,2026-08-16T03:48:38,,,
+adaptive_large_model_tuning,2,complete,175,,,,2026-08-16T11:20:29,,,
+adaptive_large_model_tuning,3,complete,175,,,,2026-08-16T18:24:55,,,
+adaptive_large_model_tuning,4,complete,175,,,,2026-08-17T05:46:31,,,
+adaptive_large_model_tuning,5,complete,175,175,2026-08-17T14:11:17,,2026-08-17T21:20:01,output/encoder_only/wlasl100/logs/adaptive_large_model_tuning_round5.stdout.log,output/encoder_only/wlasl100/logs/adaptive_large_model_tuning_round5.stderr.log,

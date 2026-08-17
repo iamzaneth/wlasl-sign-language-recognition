@@ -1,0 +1,7 @@
+{
+  "landmark_subset": "pose_hands_eyebrows",
+  "best_val_macro_f1": 0.6959782414838596,
+  "test_macro_f1": 0.6625661375661376,
+  "source_run_dir": "output/encoder_only/wlasl100/pose_hands_eyebrows/runs/pose_hands_eyebrows__round7_round6_best_seed2_20260815_191429",
+  "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_eyebrows"
+}

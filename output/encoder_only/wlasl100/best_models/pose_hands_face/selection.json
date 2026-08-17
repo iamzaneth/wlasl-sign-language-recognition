@@ -1,0 +1,7 @@
+{
+  "landmark_subset": "pose_hands_face",
+  "best_val_macro_f1": 0.6637952559300873,
+  "test_macro_f1": 0.6083333333333333,
+  "source_run_dir": "output/encoder_only/wlasl100/pose_hands_face/runs/pose_hands_face__large5_r3_lr_0.80_seed3_20260816_175414",
+  "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_face"
+}

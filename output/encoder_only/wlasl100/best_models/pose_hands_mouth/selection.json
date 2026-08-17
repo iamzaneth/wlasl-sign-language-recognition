@@ -1,0 +1,7 @@
+{
+  "landmark_subset": "pose_hands_mouth",
+  "best_val_macro_f1": 0.703852327447833,
+  "test_macro_f1": 0.6032407407407407,
+  "source_run_dir": "output/encoder_only/wlasl100/pose_hands_mouth/runs/pose_hands_mouth__large5_r4_dropout_high_seed3_20260817_021751",
+  "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_mouth"
+}

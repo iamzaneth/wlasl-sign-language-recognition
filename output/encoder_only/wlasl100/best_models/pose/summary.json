@@ -1,0 +1,29 @@
+{
+  "run_id": "pose__large5_r3_lr_1.40_seed4_20260816_124118",
+  "name": "pose__large5_r3_lr_1.40_seed4",
+  "modalities": "pose",
+  "input_dim": 27,
+  "best_epoch": 64,
+  "best_val_macro_f1": 0.2933297663634742,
+  "test_acc": 0.19,
+  "test_macro_f1": 0.17032627865961197,
+  "test_weighted_f1": 0.1803809523809524,
+  "test_balanced_acc": 0.18055555555555555,
+  "test_loss": 7.204193096160889,
+  "test_top1_acc": 0.19,
+  "test_top5_acc": 0.45,
+  "test_num_samples": 100.0,
+  "seconds": 234.01348757743835,
+  "run_dir": "output/encoder_only/wlasl100/pose/runs/pose__large5_r3_lr_1.40_seed4_20260816_124118",
+  "artifacts": [
+    "config.json",
+    "runtime.json",
+    "data_context.json",
+    "history.csv",
+    "metrics.csv",
+    "test_predictions.csv",
+    "test_per_class_metrics.csv",
+    "best.pt",
+    "last.pt"
+  ]
+}

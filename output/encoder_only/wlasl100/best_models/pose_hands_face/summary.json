@@ -1,0 +1,29 @@
+{
+  "run_id": "pose_hands_face__large5_r3_lr_0.80_seed3_20260816_175414",
+  "name": "pose_hands_face__large5_r3_lr_0.80_seed3",
+  "modalities": "pose,hand,mouth,eye,eyebrow",
+  "input_dim": 429,
+  "best_epoch": 68,
+  "best_val_macro_f1": 0.6637952559300873,
+  "test_acc": 0.62,
+  "test_macro_f1": 0.6083333333333333,
+  "test_weighted_f1": 0.5906666666666667,
+  "test_balanced_acc": 0.6597222222222222,
+  "test_loss": 2.296146916151047,
+  "test_top1_acc": 0.62,
+  "test_top5_acc": 0.83,
+  "test_num_samples": 100.0,
+  "seconds": 98.1823832988739,
+  "run_dir": "output/encoder_only/wlasl100/pose_hands_face/runs/pose_hands_face__large5_r3_lr_0.80_seed3_20260816_175414",
+  "artifacts": [
+    "config.json",
+    "runtime.json",
+    "data_context.json",
+    "history.csv",
+    "metrics.csv",
+    "test_predictions.csv",
+    "test_per_class_metrics.csv",
+    "best.pt",
+    "last.pt"
+  ]
+}

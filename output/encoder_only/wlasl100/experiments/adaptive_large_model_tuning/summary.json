@@ -1,0 +1,58 @@
+{
+  "campaign_id": "adaptive_large_model_tuning",
+  "status": "complete",
+  "completed_through_round": 5,
+  "completed_at": "2026-08-17T21:20:04",
+  "round_results": "output/encoder_only/wlasl100/experiments/adaptive_large_model_tuning/results.csv",
+  "winners": [
+    {
+      "landmark_subset": "pose",
+      "best_val_macro_f1": 0.2933297663634742,
+      "test_macro_f1": 0.17032627865961197,
+      "source_run_dir": "output/encoder_only/wlasl100/pose/runs/pose__large5_r3_lr_1.40_seed4_20260816_124118",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose"
+    },
+    {
+      "landmark_subset": "hands",
+      "best_val_macro_f1": 0.7157838416265382,
+      "test_macro_f1": 0.7019179894179894,
+      "source_run_dir": "output/encoder_only/wlasl100/hands/runs/hands__round4_wd_high_20260814_001721",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/hands"
+    },
+    {
+      "landmark_subset": "pose_hands",
+      "best_val_macro_f1": 0.7021401819154629,
+      "test_macro_f1": 0.6291666666666667,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands/runs/pose_hands__large5_r5_portfolio_r2_depth_down_seed4_20260817_181544",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands"
+    },
+    {
+      "landmark_subset": "pose_hands_mouth",
+      "best_val_macro_f1": 0.703852327447833,
+      "test_macro_f1": 0.6032407407407407,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands_mouth/runs/pose_hands_mouth__large5_r4_dropout_high_seed3_20260817_021751",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_mouth"
+    },
+    {
+      "landmark_subset": "pose_hands_eyes",
+      "best_val_macro_f1": 0.6862760834670947,
+      "test_macro_f1": 0.5657407407407408,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands_eyes/runs/pose_hands_eyes__large5_r1_wide640_seed3_20260816_012927",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_eyes"
+    },
+    {
+      "landmark_subset": "pose_hands_eyebrows",
+      "best_val_macro_f1": 0.6959782414838596,
+      "test_macro_f1": 0.6625661375661376,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands_eyebrows/runs/pose_hands_eyebrows__round7_round6_best_seed2_20260815_191429",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_eyebrows"
+    },
+    {
+      "landmark_subset": "pose_hands_face",
+      "best_val_macro_f1": 0.6637952559300873,
+      "test_macro_f1": 0.6083333333333333,
+      "source_run_dir": "output/encoder_only/wlasl100/pose_hands_face/runs/pose_hands_face__large5_r3_lr_0.80_seed3_20260816_175414",
+      "best_model_dir": "output/encoder_only/wlasl100/best_models/pose_hands_face"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "run_id": "hands__round4_wd_high_20260814_001721",
+  "name": "hands__round4_wd_high",
+  "modalities": "hand",
+  "input_dim": 126,
+  "best_epoch": 77,
+  "best_val_macro_f1": 0.7157838416265382,
+  "test_acc": 0.69,
+  "test_macro_f1": 0.7019179894179894,
+  "test_weighted_f1": 0.676142857142857,
+  "test_balanced_acc": 0.7337962962962963,
+  "test_loss": 1.9581862926483153,
+  "test_top1_acc": 0.69,
+  "test_top5_acc": 0.83,
+  "test_num_samples": 100.0,
+  "seconds": 68.0705578327179,
+  "run_dir": "output/encoder_only/wlasl100/hands/runs/hands__round4_wd_high_20260814_001721",
+  "artifacts": [
+    "config.json",
+    "runtime.json",
+    "data_context.json",
+    "history.csv",
+    "metrics.csv",
+    "test_predictions.csv",
+    "test_per_class_metrics.csv",
+    "best.pt",
+    "last.pt"
+  ]
+}
