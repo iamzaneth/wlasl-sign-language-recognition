@@ -9,7 +9,7 @@ from typing import Iterable
 
 import numpy as np
 
-from src.config.paths import PROCESSED_LANDMARK_DIR, SPLITS_DIR
+from src.config.paths import PROCESSED_LANDMARK_DIR, SPLITS_DIR, project_relative_path
 from src.preprocessing.landmark_io import load_npz
 
 
@@ -206,7 +206,7 @@ def build_feature_cache(
         "num_samples": len(rows),
         "feature_dim": total_width,
         "modalities": {name: list(feature_layout()[name]) for name in VALID_MODALITIES},
-        "source": str(landmark_dir),
+        "source": project_relative_path(landmark_dir),
     }, ensure_ascii=False, indent=2), encoding="utf-8")
     return cache_dir
 
