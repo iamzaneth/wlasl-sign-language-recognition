@@ -246,13 +246,16 @@ Every completed run writes:
 | `test_predictions.csv` | Per-video top-1 and top-5 predictions/probabilities. |
 | `test_per_class_metrics.csv` | Test precision, recall, F1, and support per present class. |
 | `summary.json` | Compact best-epoch, test-metric, timing, and artifact summary. |
-| `best.pt` | Best validation checkpoint with feature standardization statistics. |
-| `last.pt` | Final-epoch checkpoint. |
+| `best.pt` | Temporary best-validation checkpoint; retained for direct training and moved into the published-model lifecycle by adaptive tuning. |
 
 After a direct multi-trial command, an experiment summary CSV is written under
 `output/encoder_only/<subset>/reports`. Direct training does not update
 `best_models/`; publication of global winners is performed by the adaptive tuning
-runner.
+runner. A successful adaptive round copies each selected `best.pt` into
+`best_models/`, then removes every run-level `.pt` file. The JSON and CSV artifacts
+remain, so completed trials can still be skipped and later tuning rounds can reconstruct
+their search state. `last.pt` is not written because no training or publication path
+consumes it.
 
 Metadata paths owned by the repository are serialized in project-relative POSIX form so
 the JSON and CSV files remain portable across clones.
@@ -301,15 +304,17 @@ resume and removed after successful aggregation.
 
 The first round requires a baseline configuration for every canonical subset. The
 default tracked campaign includes `baseline_best.json`; a new campaign ID instead reads
-local `best_models/<subset>/selection.json` and its referenced source run. Because run
-directories and checkpoints are ignored by Git, starting a new campaign or rebuilding
-winners from a fresh clone requires recreating the local run history first.
+local `best_models/<subset>/selection.json` and metadata from its referenced source run.
+The source checkpoint may already have been pruned: when the selected run is unchanged,
+publication reuses the matching checkpoint in `best_models/`. Because run directories
+and checkpoints are ignored by Git, starting a new campaign or rebuilding winners from
+a fresh clone still requires recreating the local run metadata first.
 
 ## Campaign and published outputs
 
 ```text
 output/encoder_only/wlasl100/
-|-- <landmark-subset>/runs/<run-id>/
+|-- <landmark-subset>/runs/<run-id>/  metadata only after publication
 |-- best_models/<landmark-subset>/
 |   |-- selection.json
 |   |-- config.json
