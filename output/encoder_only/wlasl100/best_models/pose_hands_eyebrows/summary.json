@@ -19,11 +19,8 @@
     "config.json",
     "runtime.json",
     "data_context.json",
-    "history.csv",
     "metrics.csv",
-    "test_predictions.csv",
-    "test_per_class_metrics.csv",
-    "best.pt",
-    "last.pt"
-  ]
+    "best.pt"
+  ],
+  "checkpoint_retention": "published_best_only"
 }
