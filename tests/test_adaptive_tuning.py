@@ -99,16 +99,32 @@ def test_rebuild_best_publishes_highest_validation_run(tmp_path) -> None:
                 '{"landmark_subset":"' + subset + '"}', encoding="utf-8"
             )
             (run_dir / "summary.json").write_text(
-                '{"best_val_macro_f1":' + str(score) + ',"test_macro_f1":0.5}',
+                '{"best_val_macro_f1":' + str(score) + ',"test_macro_f1":0.5,'
+                '"artifacts":["config.json","summary.json","best.pt","last.pt"]}',
                 encoding="utf-8",
             )
             for artifact in PUBLISHED_ARTIFACTS:
                 if artifact not in {"config.json", "summary.json"}:
                     (run_dir / artifact).write_text(run_name, encoding="utf-8")
+            (run_dir / "last.pt").write_text(run_name, encoding="utf-8")
 
     winners = rebuild_best(dataset_root)
 
     assert all(winner["best_val_macro_f1"] == 0.6 for winner in winners)
+    assert not list(dataset_root.glob("*/runs/*/*.pt"))
+    for subset in VALID_LANDMARK_SUBSETS:
+        published = dataset_root / "best_models" / subset
+        assert (published / "best.pt").read_text(encoding="utf-8") == "high"
+        source_summary = (
+            dataset_root / subset / "runs" / "high" / "summary.json"
+        ).read_text(encoding="utf-8")
+        assert '"checkpoint_retention": "metadata_only_after_publication"' in source_summary
+        assert '"best.pt"' not in source_summary
+        assert '"last.pt"' not in source_summary
+
+    rebuilt_from_metadata = rebuild_best(dataset_root)
+
+    assert rebuilt_from_metadata == winners
     for subset in VALID_LANDMARK_SUBSETS:
         published = dataset_root / "best_models" / subset
         assert (published / "best.pt").read_text(encoding="utf-8") == "high"
