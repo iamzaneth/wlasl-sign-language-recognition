@@ -409,7 +409,7 @@ def train_trial(trial: dict[str, Any], cache: dict[str, Any], indices: dict[str,
         raise ValueError(f"Unsupported scheduler: {config['scheduler']}. Choose cosine, cosine_warmup, or none.")
     scaler = GradScaler("cuda", enabled=bool(config["use_amp"]) and device.type == "cuda")
 
-    best_score, best_epoch, waiting, best_state, last_state = -math.inf, 0, 0, None, None
+    best_score, best_epoch, waiting, best_state = -math.inf, 0, 0, None
     history: list[dict[str, float]] = []
     started = time.time()
     for epoch in range(1, int(config["epochs"]) + 1):
@@ -428,13 +428,11 @@ def train_trial(trial: dict[str, Any], cache: dict[str, Any], indices: dict[str,
             torch.save({"model_state_dict": cloned_model_state(model), "config": checkpoint_config, "feature_mean": mean, "feature_std": std, "best_epoch": best_epoch, "best_val_macro_f1": best_score}, run_dir / "best.pt")
         else:
             waiting += 1
-        last_state = cloned_model_state(model)
         print(f"[{config['name']}] epoch {epoch:03d}/{config['epochs']} val_f1={score:.4f} val_acc={row['val_acc']:.4f} best={best_score:.4f}")
         if waiting >= int(config["early_stopping_patience"]):
             break
     write_csv(run_dir / "history.csv", history)
-    assert best_state is not None and last_state is not None
-    torch.save({"model_state_dict": last_state, "config": checkpoint_config, "feature_mean": mean, "feature_std": std, "last_epoch": len(history), "best_epoch": best_epoch, "best_val_macro_f1": best_score}, run_dir / "last.pt")
+    assert best_state is not None
     model.load_state_dict(best_state)
     evaluated = run_epoch(model, test_loader, criterion, device, optimizer=None, scaler=scaler, use_amp=config["use_amp"], prefix="test", return_predictions=True)
     test_metrics, test_predictions = evaluated
@@ -443,7 +441,7 @@ def train_trial(trial: dict[str, Any], cache: dict[str, Any], indices: dict[str,
     write_csv(run_dir / "test_per_class_metrics.csv", per_class_rows(test_predictions, label_to_gloss))
     metric_rows = [{"split": "validation_best_epoch", "epoch": best_epoch, **history[best_epoch - 1]}, {"split": "test_best_validation_model", "epoch": best_epoch, **test_metrics}]
     write_csv(run_dir / "metrics.csv", metric_rows)
-    summary = {"run_id": run_id, "name": config["name"], "modalities": ",".join(config["modalities"]), "input_dim": config["input_dim"], "best_epoch": best_epoch, "best_val_macro_f1": best_score, **test_metrics, "seconds": time.time() - started, "run_dir": project_relative_path(run_dir), "artifacts": ["config.json", "runtime.json", "data_context.json", "history.csv", "metrics.csv", "test_predictions.csv", "test_per_class_metrics.csv", "best.pt", "last.pt"]}
+    summary = {"run_id": run_id, "name": config["name"], "modalities": ",".join(config["modalities"]), "input_dim": config["input_dim"], "best_epoch": best_epoch, "best_val_macro_f1": best_score, **test_metrics, "seconds": time.time() - started, "run_dir": project_relative_path(run_dir), "artifacts": ["config.json", "runtime.json", "data_context.json", "history.csv", "metrics.csv", "test_predictions.csv", "test_per_class_metrics.csv", "best.pt"]}
     write_json(run_dir / "summary.json", summary)
     return summary
 
