@@ -44,7 +44,7 @@ WLASL annotations + local MP4 files
        Transformer encoder training
                 |
                 v
-       metrics, predictions, checkpoints
+     run metadata + published best checkpoints
 ```
 
 ## Quick start
@@ -193,6 +193,11 @@ Because `*.pt` and nested `runs/` directories are ignored, a fresh clone contain
 recorded metrics and configurations but not trained weights or the complete run history.
 Reproduce a checkpoint by preparing the corresponding data and rerunning its saved
 configuration.
+
+Adaptive tuning keeps completed `runs/` as metadata-only history. After each successful
+winner publication, run-level checkpoints are removed and only the seven selected
+checkpoints under `best_models/` remain. This preserves resumable search state without
+retaining duplicate model weights.
 
 ## Data, models, and licensing
 
